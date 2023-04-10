@@ -19,7 +19,7 @@ public class CurrentAccount extends BankAccount{
         if(!isNumberValid(tradeLicenseId)){
             String rearrangedId=arrangedString(tradeLicenseId);
 
-            if(rearrangedId==""){
+            if(rearrangedId.equals("")){
                 throw new Exception("Valid License can not be generated");
             }
             else{
@@ -41,15 +41,15 @@ public class CurrentAccount extends BankAccount{
 
         int maxCount=count[(int)ch_max-(int)'A'];
 
-        if(N%2==0){
-            if(maxCount>(N/2)+1)
+        if(N%2==0) {
+            if (maxCount > N/2)
                 return "";
+        }
             else{
-                if(maxCount>(N/2+2)){
+                if(maxCount>(N/2)+1){
                     return "";
                 }
             }
-        }
 
         char[]ans=new char[N];
         int index;
